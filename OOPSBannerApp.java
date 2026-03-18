@@ -1,19 +1,53 @@
 public class OOPSBannerApp {
 
+    // Method for O
+    public static String[] getOPattern() {
+        return new String[]{
+            " *** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            " *** "
+        };
+    }
+
+    // Method for P
+    public static String[] getPPattern() {
+        return new String[]{
+            "**** ",
+            "*   *",
+            "*   *",
+            "**** ",
+            "*    ",
+            "*    ",
+            "*    "
+        };
+    }
+
+    // Method for S
+    public static String[] getSPattern() {
+        return new String[]{
+            " ****",
+            "*    ",
+            "*    ",
+            " *** ",
+            "    *",
+            "    *",
+            "**** "
+        };
+    }
+
     public static void main(String[] args) {
 
-        // Inline array initialization using String.join()
-        String[] lines = {
-            String.join(" ", " *** ", " *** ", " ***** ", " ***** "),
-            String.join(" ", "*   *", "*   *", "*     ", "*     "),
-            String.join(" ", "*   *", "*   *", "***** ", "***** "),
-            String.join(" ", "*   *", "*   *", "*     ", "    * "),
-            String.join(" ", " *** ", " *** ", " ***** ", "***** ")
-        };
+        String[] o = getOPattern();
+        String[] p = getPPattern();
+        String[] s = getSPattern();
 
-        // Print using for-each loop
-        for (String line : lines) {
-            System.out.println(line);
+        // Print OOPS
+        for (int i = 0; i < o.length; i++) {
+            System.out.println(o[i] + " " + o[i] + " " + p[i] + " " + s[i]);
         }
     }
 }
