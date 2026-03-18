@@ -1,19 +1,61 @@
+
+
 public class OOPSBannerApp {
+
     public static void main(String[] args) {
 
-        System.out.println(String.join(" ",
-                " ***** ", " ***** ", " ***** ", " ***** "));
+        // Letter O
+        String[] O = {
+                "  *****  ",
+                " *     * ",
+                "*       *",
+                "*       *",
+                "*       *",
+                " *     * ",
+                "  *****  "
+        };
 
-        System.out.println(String.join(" ",
-                "*     *", "*     *", "*     *", "*     *"));
+        // Letter P
+        String[] P = {
+                " ******  ",
+                " *     * ",
+                " *     * ",
+                " ******  ",
+                " *       ",
+                " *       ",
+                " *       "
+        };
 
-        System.out.println(String.join(" ",
-                "*     *", "*     *", " ***** ", " ***** "));
+        // Letter S
+        String[] S = {
+                " ****** ",
+                " *      ",
+                " *      ",
+                " *****  ",
+                "      * ",
+                "      * ",
+                " ****** "
+        };
 
-        System.out.println(String.join(" ",
-                "*     *", "*     *", "*      ", "     * "));
+        String word = "OOPS";
 
-        System.out.println(String.join(" ",
-                " ***** ", " ***** ", "*      ", " ***** "));
+        // Loop through rows
+        for (int i = 0; i < 7; i++) {
+
+            // Loop through characters
+            for (char ch : word.toCharArray()) {
+
+                if (ch == 'O') {
+                    System.out.print(O[i] + " ");
+                } else if (ch == 'P') {
+                    System.out.print(P[i] + " ");
+                } else if (ch == 'S') {
+                    System.out.print(S[i] + " ");
+                }
+            }
+
+            // Move to next line
+            System.out.println();
+        }
     }
 }
